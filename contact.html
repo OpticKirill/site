@@ -7,11 +7,13 @@
     <title>Контакты - ДоброДел</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div id="top"></div>
     <div class="container">
         <header>
             <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Логотип ДоброДел"></a>
+                <a href="index.html"><img src="image/logo.png" alt="Логотип ДоброДел"></a>
             </div>
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <input type="checkbox" id="menu-toggle" class="menu-toggle" />
@@ -27,27 +29,62 @@
         </header>
         <main>
             <h2>Контакты</h2>
-            <section class="contact-info">
-                <p><strong>Адрес:</strong> Ильюшина, 15, Вологда, Россия</p>
-                <p><strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
-                <p><strong>Телефон:</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
-                <p><strong>Горячая линия:</strong> <a href="tel:+0987654321">+098 765 4321</a></p>
+            <section class="contact-content">
+                <div class="contact-info">
+                    <p><strong>Адрес:</strong> Ильюшина, 15, Вологда, Россия</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@example.com">krychkovkirill1404@gmail.com</a></p>
+                    <p><strong>Телефон:</strong> <a href="tel:+1234567890">+7-951-733-46-80</a></p>
+                    <p><strong>Горячая линия:</strong> <a href="tel:+0987654321">+7-981-423-23-90</a></p>
+                    <div class="social-media">
+                        <!--  иконки социальных сетей -->
+                        <a href="https://vk.com/optic_kirill" target="_blank"><img src="image/vklogo.png" alt="VK"></a>
+                        <a href="https://t.me/Optic_Kirill" target="_blank"><img
+                                src="image/free-icon-telegram-3670070.png" alt="Telegram"></a>
+                        <a href="https://instagram.com" target="_blank"><img src="image/free-icon-instagram-2111463.png"
+                                alt="Instagram"></a>
 
-                <div class="social-media">
-                    <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
-                    <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-                    <!-- Другие иконки социальных сетей -->
+                    </div>
                 </div>
                 <div class="map-container">
                     <!-- Вставленный код Google Maps -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.1247837652812!2d39.81810257223714!3d59.209454523970265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ae9769bd56eb9d%3A0xf75b14eada34d4c9!2z0YPQuy4g0JjQu9GM0Y7RiNC40L3QsCwgMTUsINCS0L7Qu9C-0LPQtNCwLCDQktC-0LvQvtCz0L7QtNGB0LrQsNGPINC-0LHQuy4sIDE2MDAyOA!5e0!3m2!1sru!2sru!4v1699811356810!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen=""
-                        loading="lazy"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.1247837652812!2d39.81810257223714!3d59.209454523970265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ae9769bd56eb9d%3A0xf75b14eada34d4c9!2z0YPQuy4g0JjQu9GM0Y7RiNC40L3QsCwgMTUsINCS0L7Qu9C-0LPQtNCwLCDQktC-0LvQvtCz0L7QtNGB0LrQsNGPINC-0LHQuy4sIDE2MDAyOA!5e0!3m2!1sru!2sru!4v1699811356810!5m2!1sru!2sru"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </section>
         </main>
         <footer>
-            <p>© 2023 ДоброДел. Все права защищены.</p>
+            <div class="footer-container">
+                <!-- Секция с контактной информацией и ссылками -->
+                <div class="footer-info">
+                    <p>ДоброДел - помощь тем, кто в ней нуждается</p>
+                    <p><strong>Email:</strong> <a
+                            href="mailto:krychkovkirill1404@gmail.com">krychkovkirill1404@gmail.com</a></p>
+                    <p><strong>Телефон:</strong> <a href="tel:+79517334680">+79517334680</a></p>
+                </div>
+
+                <!-- Секция социальных сетей -->
+                <div class="footer-social">
+                    <a href="https://vk.com/optic_kirill" target="_blank"><img src="image/vklogo.png" alt="Vk"></a>
+                    <a href="https://t.me/Optic_Kirill" target="_blank"><img src="image/free-icon-telegram-3670070.png"
+                            alt="Telegram"></a>
+                    <a href="https://instagram.com" target="_blank"><img src="image/free-icon-instagram-2111463.png"
+                            alt="Instagram"></a>
+                </div>
+
+                <!-- Кнопка "Наверх" -->
+                <div class="to-top">
+                    <a href="#top" class="to-top-link">Наверх</a>
+                </div>
+            </div>
+
+            <!-- Декоративный элемент в нижней части футера -->
+            <div class="footer-decoration"></div>
+
+            <!-- Копирайт -->
+            <div class="footer-copy">
+                <p>© 2023 ДоброДел. Все права защищены.</p>
+            </div>
         </footer>
     </div>
 </body>

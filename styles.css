@@ -5,18 +5,14 @@ html {
     padding: 0;
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;
-  
-
-
 }
 
-html {
-    overflow-y: hidden;
-}
+
 
 body {
-
     overflow-y: scroll;
+    scroll-behavior: smooth;
+    /* Позволяет прокрутку содержимого body */
 }
 
 .container {
@@ -30,8 +26,10 @@ header {
     color: white;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Распределяем пространство между логотипом и иконкой меню */
-    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: space-between;
+    /* Распределяе пространство между логотипом и иконкой меню */
+    align-items: center;
+    /* Центрируем элементы по вертикали */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -78,7 +76,7 @@ header {
 }
 
 .banner {
-    height: 300px;
+    height: 350px;
     /* Высота баннера */
     display: flex;
     justify-content: center;
@@ -95,19 +93,19 @@ header {
 
     0%,
     33% {
-        background-image: url('vvv.png');
+        background-image: url('image/devuska-lisa-volk.jpg');
         /* Путь к первому изображению */
     }
 
     34%,
     67% {
-        background-image: url('ggg.png');
+        background-image: url('image/1675557077_gas-kvas-com-p-zhivotnie-v-rukakh-cheloveka-risunok-8.jpg');
         /* Путь ко второму изображению */
     }
 
     68%,
     100% {
-        background-image: url('banner.png');
+        background-image: url('image/slide3.png');
         /* Путь к третьему изображению */
     }
 }
@@ -129,8 +127,9 @@ main {
 .about,
 .how-to-help {
     margin-bottom: 20px;
-  
+
 }
+
 .how-to-help-summary {
     background-color: #f5f5f5;
     padding: 20px;
@@ -140,11 +139,12 @@ main {
 .how-to-help-summary h2 {
     color: #011669;
     margin-bottom: 10px;
-    
+
 }
 
 .how-to-help-summary p {
-    text-align: left; /* Выравнивание текста по левому краю */
+    text-align: left;
+    /* Выравнивание текста по левому краю */
     margin-bottom: 20px;
     color: #333;
 }
@@ -166,7 +166,7 @@ main {
 }
 
 .about h2,
- h2,
+h2,
 .news-events h2 {
     color: #011669;
     margin-bottom: 10px;
@@ -191,13 +191,121 @@ main {
 }
 
 footer {
-    background-color: rgb(14, 8, 45);
+    background-color: #011669;
     color: white;
+    padding: 20px 0;
+    position: relative;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer-info,
+.footer-social,
+.to-top {
+    margin: 10px;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+   
+}
+
+.footer-info p a,
+.footer-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-left: 10px;
+    /* Добавляем небольшой отступ слева от ссылки */
+}
+
+.footer-info p a:hover,
+.footer-info a:hover {
+    color: #0044cc;
+    /* Изменение цвета при наведении */
+}
+
+/* Стилизция иконок социальных сетей */
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+/* Стилизация ссылки наверх */
+.to-top-link {
+    display: inline-block;
+    background-color: #0044cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.to-top-link:hover {
+    background-color: #002d99;
+}
+/* декоративный элемент и анимация */
+.footer-decoration {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, #f0f, #0ff, #f0f);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.footer-copy {
+    padding-top: 20px;
+}
+
+/* Адаптивность подвала */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-social {
+        margin: 20px 0;
+    }
 }
 
 .menu-icon {
@@ -226,8 +334,10 @@ footer {
     line-height: 1.6;
     margin-bottom: 10px;
 }
+
 .about strong {
-    color: #0044cc; /* Выделение ключевых слов цветом */
+    color: #0044cc;
+    /* Выделение ключевых слов цветом */
 }
 
 .about-us {
@@ -245,8 +355,10 @@ footer {
     align-items: start;
 }
 
-.about-text, .about-images {
-    flex: 1 1 45%; /* Занимает половину ширины контейнера */
+.about-text,
+.about-images {
+    flex: 1 1 45%;
+    /* Занимает половину ширины контейнера */
     margin: 10px;
 }
 
@@ -264,7 +376,8 @@ footer {
 }
 
 
-.project-item, .news-item {
+.project-item,
+.news-item {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -274,7 +387,8 @@ footer {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding-bottom: 50px; /* Дополнительный нижний отступ для кнопки */
+    padding-bottom: 50px;
+    /* Дополнительный нижний отступ для кнопки */
 }
 
 .project-item img,
@@ -283,7 +397,7 @@ footer {
     /* Ширина изображения занимает 100% ширины контейнера */
     height: auto;
     /* Высота автоматически подстраивается под ширину, сохраняя пропорции изображения */
-    
+
     object-fit: cover;
     /* Обрезает изображение по мере необходимости, чтобы оно заполнило контейнер */
     object-position: center;
@@ -301,17 +415,24 @@ footer {
     padding: 0 10px;
     text-align: justify;
 }
-.project-item h3, .project-item p {
-    padding: 10px; /* Добавьте отступ для заголовка и параграфа */
+
+.project-item h3,
+.project-item p {
+    padding: 10px;
+    /* Добавьте отступ для заголовка и параграфа */
 }
 
 
 .project-item a:last-child {
-    
-    position: absolute; /* Абсолютное позиционирование */
-    bottom: 0; /* Расположение в нижней части карточки */
-    left: 0; /* Выравнивание по левому краю */
-    width: 100%; /* Ширина кнопки соответствует ширине карточки */
+
+    position: absolute;
+    /* Абсолютное позиционирование */
+    bottom: 0;
+    /* Расположение в нижней части карточки */
+    left: 0;
+    /* Выравнивание по левому краю */
+    width: 100%;
+    /* Ширина кнопки соответствует ширине карточки */
     background-color: #011669;
     color: #fff;
     text-align: center;
@@ -322,13 +443,43 @@ footer {
 
 
 
-.project-item a:hover, .donation-button:hover {
+.project-item a:hover,
+.donation-button:hover {
     background-color: #0044cc;
 }
+
 
 .project-detail {
     padding: 20px;
     background-color: #f5f5f5;
+}
+.bat-navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bat-nav-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007bff; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.bat-nav-button:hover {
+    background-color: #0056b3; 
+}
+
+@media (max-width: 600px) {
+    .bat-nav-button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 .project-detail-content {
@@ -337,6 +488,7 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
 }
+
 .project-detail-image img {
     max-width: 100%;
     height: auto;
@@ -348,9 +500,39 @@ footer {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-.project-detail-image, .project-detail-text {
-    flex: 1 1 48%; /* Занимает около половины ширины родительского контейнера */
+
+.project-detail-image,
+.project-detail-text {
+    flex: 1 1 48%;
+    
     margin: 10px;
+}
+@media (max-width: 768px) {
+    .project-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-to-projects,
+    .next-prev-project a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .next-prev-project {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .about-text,
+    .about-images,
+    .project-detail-image,
+    .project-detail-text {
+        flex-basis: 100%;
+        /* На маленьких экранах элементы занимают всю ширину */
+    }
 }
 .help-options {
     padding: 20px;
@@ -415,8 +597,13 @@ footer {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-33.3333%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.3333%);
+    }
 }
 
 .donor {
@@ -493,13 +680,15 @@ footer {
 
 .news-item {
     display: flex;
-    flex-direction: column; /* Элементы располагаются в колонке */
+    flex-direction: column;
+    /* Элементы располагаются в колонке */
     background-color: #fff;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    position: relative; /* Относительное позиционирование */
+    position: relative;
+    /* Относительное позиционирование */
 }
 
 .news-item img {
@@ -510,7 +699,8 @@ footer {
 
 .news-content {
     padding: 15px;
-    flex-grow: 1; /* Контейнер занимает всё доступное пространство */
+    flex-grow: 1;
+    /* Контейнер занимает всё доступное пространство */
 }
 
 .news-content h3 {
@@ -526,6 +716,7 @@ footer {
 .news-content p {
     text-align: justify;
 }
+
 .news-item a:last-child {
     background-color: #011669;
     color: #fff;
@@ -533,11 +724,15 @@ footer {
     padding: 10px;
     text-decoration: none;
     transition: background-color 0.3s;
-    display: block; /* Блочное отображение */
-    position: absolute; /* Абсолютное позиционирование */
-    bottom: 0; /* Расположение в нижней части карточки */
+    display: block;
+    /* Блочное отображение */
+    position: absolute;
+    /* Абсолютное позиционирование */
+    bottom: 0;
+    /* Расположение в нижней части карточки */
     left: 0;
-    width: 100%; /* Ширина кнопки соответствует ширине карточки */
+    width: 100%;
+    /* Ширина кнопки соответствует ширине карточки */
 }
 
 
@@ -548,20 +743,26 @@ footer {
 
 .news-article {
     padding: 20px;
-    max-width: 800px; /* Ограничиваем максимальную ширину для удобочитаемости */
-    margin: auto; /* Выравниваем статью по центру */
-    background-color: #f5f5f5; /* Фон для статьи, можно адаптировать под дизайн сайта */
+    max-width: 800px;
+    /* Ограничиваем максимальную ширину для удобочитаемости */
+    margin: auto;
+    /* Выравниваем статью по центру */
+    background-color: #f5f5f5;
+    /* Фон для статьи, можно адаптировать под дизайн сайта */
 }
 
 .news-article h2 {
-    color: #011669; /* Цвет заголовка */
-    margin-bottom: 10px; /* Отступ снизу для заголовка */
+    color: #011669;
+    /* Цвет заголовка */
+    margin-bottom: 10px;
+    /* Отступ снизу для заголовка */
 }
 
 .news-date {
     font-style: italic;
     color: #666;
-    margin-bottom: 20px; /* Отступ снизу для даты */
+    margin-bottom: 20px;
+    /* Отступ снизу для даты */
 }
 
 .news-article img {
@@ -572,14 +773,18 @@ footer {
 }
 
 .news-text p {
-    text-align: justify; /* Выравнивание текста по ширине */
-    line-height: 1.6; /* Межстрочный интервал для лучшей читаемости */
-    margin-bottom: 15px; /* Отступ снизу для абзацев */
+    text-align: justify;
+    /* Выравнивание текста по ширине */
+    line-height: 1.6;
+    /* Межстрочный интервал для лучшей читаемости */
+    margin-bottom: 15px;
+    /* Отступ снизу для абзацев */
 }
 
 .faq {
     padding: 20px;
     background-color: #f5f5f5;
+    
 }
 
 .faq-item {
@@ -589,7 +794,9 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 .faq-question {
+  
     display: block;
     padding: 15px;
     background-color: #011669;
@@ -598,13 +805,17 @@ footer {
     border-radius: 10px 10px 0 0;
     font-size: 1em;
     transition: background-color 0.3s, box-shadow 0.3s;
+   
 }
+
 
 .faq-answer {
     display: none;
     padding: 15px;
     border-radius: 0 0 10px 10px;
+  
 }
+
 
 .faq-answer p {
     margin: 0;
@@ -621,12 +832,22 @@ footer {
     /* Изменение цвета при наведении */
 }
 
-.contact-info {
-    padding: 20px;
+/* Контакты */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+.contact-info {
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .contact-info h2 {
@@ -673,23 +894,45 @@ footer {
     transform: scale(1.1);
 }
 
-
 .map-container {
-    margin-top: 20px;
+    grid-column: 1;
+    grid-row: 1;
+    height: 300px;
+    /* Изначальная высота карты */
+}
+
+.map-container iframe {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    overflow: hidden;
+    height: 100%;
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+@media screen and (min-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-info {
+        grid-column: 1;
+        grid-row: 1;
+        margin-right: 20px;
+    }
+
+    .map-container {
+        grid-column: 2;
+        grid-row: 1;
+
+    }
 }
 
 .project-item img,
 .news-item img {
     width: 100%;
-   
+
     object-fit: cover;
     min-height: 300px;
     max-height: 300px;
-    
+
 }
 
 /* Стили для оберток проектов и новостей */
@@ -698,7 +941,10 @@ footer {
     display: block;
     margin-bottom: 20px;
 }
- .fade-in-element ,.news-item, .project-item {
+
+.fade-in-element,
+.news-item,
+.project-item {
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -706,35 +952,49 @@ footer {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
-} 
-.project-item:hover, .news-item:hover {
+}
+
+.project-item:hover,
+.news-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: scale(1.03);
     transition: transform 0.3s, box-shadow 0.3s;
 }
- .project, .news-event {
+
+.project,
+.news-event {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1s ease-out forwards;
 }
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 }
+
 .faq-item:target .faq-answer {
-    max-height: 1000px; /* Достаточно большое значение для показа всего содержимого */
+    max-height: 1000px;
+    /* Достаточно большое значение для показа всего содержимого */
 }
-a:hover, .donation-button:hover,.donation-button:hover{
+
+a:hover,
+.donation-button:hover,
+.donation-button:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
 }
-.project h2, .news-event h2 {
+
+.project h2,
+.news-event h2 {
     animation: none;
 }
+
 @media screen and (max-width: 900px) {
     header {
         padding: 10px 20px;
@@ -743,7 +1003,8 @@ a:hover, .donation-button:hover,.donation-button:hover{
         align-items: center;
     }
 
-    .logo, .menu-icon {
+    .logo,
+    .menu-icon {
         position: static;
         margin: 0;
         z-index: 1500;
@@ -757,18 +1018,23 @@ a:hover, .donation-button:hover,.donation-button:hover{
         flex-direction: column;
         align-items: center;
         width: 100%;
-        position: fixed; /* Используем fixed для фиксации относительно окна браузера */
-        top: 0; /* Начальное положение меню у верхней границы экрана */
+        position: fixed;
+        /* Используем fixed для фиксации относительно окна браузера */
+        top: 0;
+        /* Начальное положение меню у верхней границы экрана */
         left: 0;
-        transform: translateY(-100%); /* Смещаем меню вверх за пределы экрана */
-        transition: transform 0.5s ease; /* Плавное появление с помощью трансформации */
+        transform: translateY(-100%);
+        /* Смещаем меню вверх за пределы экрана */
+        transition: transform 0.5s ease;
+        /* Плавное появление с помощью трансформации */
         background-color: #011669;
-        z-index: 1499; 
+        z-index: 1499;
         padding-top: 20px;
     }
 
-    .menu-toggle:checked + .navbar {
-        transform: translateY(0); /* При активации чекбокса выдвигаем меню вниз */
+    .menu-toggle:checked+.navbar {
+        transform: translateY(0);
+        /* При активации чекбокса выдвигаем меню вниз */
     }
 
     .navbar a {
@@ -778,22 +1044,26 @@ a:hover, .donation-button:hover,.donation-button:hover{
         padding: 10px;
         opacity: 0;
         transform: translateY(-10px);
-        transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;   
+        transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
     }
 
-    .menu-toggle:checked + .navbar a {
+    .menu-toggle:checked+.navbar a {
         opacity: 1;
         transform: translateY(0);
-        transition-delay: 0.3s; /* задержка для последовательного появления */
-    }
-    
-}
-@media screen and (max-width: 768px) {
-    .navbar a {
-        padding: 12px 20px; /* больше места для нажатия на мобильных устройствах */
+        transition-delay: 0.3s;
+        /* задержка для последовательного появления */
     }
 
 }
+
+@media screen and (max-width: 768px) {
+    .navbar a {
+        padding: 12px 20px;
+        /* больше места для нажатия на мобильных устройствах */
+    }
+
+}
+
 @media screen and (max-width: 768px) {
 
     .project-item img,
@@ -803,13 +1073,9 @@ a:hover, .donation-button:hover,.donation-button:hover{
 }
 
 @media screen and (max-width: 768px) {
+
     .project,
     .news-events {
         grid-template-columns: 1fr;
-    }
-} 
-@media screen and (max-width: 768px) {
-    .about-text, .about-images,.project-detail-image, .project-detail-text {
-        flex-basis: 100%; /* На маленьких экранах элементы занимают всю ширину */
     }
 }
